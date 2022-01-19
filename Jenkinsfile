@@ -26,5 +26,11 @@ pipeline {
             }
             
         }
+        stage ('Terraform apply'){
+            steps {
+                sh 'terraform apply'
+            }
+            
+        }
     }
 }
