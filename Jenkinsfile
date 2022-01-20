@@ -8,6 +8,7 @@ pipeline {
         
         stage ('Terraform init'){
             steps {
+                sh 'rm tfplan.tf'
                 sh 'terraform init'    
             }
             
