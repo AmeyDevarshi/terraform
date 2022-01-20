@@ -8,7 +8,7 @@ pipeline {
         
         stage ('Terraform init'){
             steps {
-                sh 'terraform init'    
+                sh 'terraform init -input=false'    
             }
             
         }
@@ -22,13 +22,13 @@ pipeline {
         
         stage ('Terraform plan'){
             steps {
-                sh 'terraform plan'
+                sh 'terraform plan -out=tfplan -input=false'
             }
             
         }
         stage ('Terraform apply'){
             steps {
-                sh 'terraform apply'
+                sh 'terraform apply -input=false tfplan'
             }
             
         }
