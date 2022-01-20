@@ -8,7 +8,6 @@ pipeline {
         
         stage ('Terraform init'){
             steps {
-                cleanws()
                 sh 'terraform init'    
             }
             
