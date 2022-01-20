@@ -22,7 +22,7 @@ pipeline {
         
         stage ('Terraform plan'){
             steps {
-                sh 'terraform plan -out=tfplan.tf'
+                sh 'terraform plan'
             }
             
         }
