@@ -22,7 +22,7 @@ pipeline {
         
         stage ('Terraform plan'){
             steps {
-                sh 'terraform plan -input-true'
+                sh 'terraform plan -out'
             }
             
         }
